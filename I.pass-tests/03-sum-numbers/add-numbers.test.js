@@ -1,10 +1,11 @@
-var addAllnumbers = require("./add-numbers");
+const { sumAddNumbers } = require("./add-numbers");
 
-test("Add all numbers", function() {
-  var numbers = [9, 23, 10, 3, 8];
-  var expected = 53;
+describe("Given the sumAllNumbers function", () => {
+  it("should add all numbers ", () => {
+    const numbers = [9, 23, 10, 3, 8];
+    const expected = 53;
+    const output = sumAddNumbers(numbers);
 
-  var output = addAllnumbers(numbers);
-
-  expect(output).toEqual(expected);
+    expect(output).toEqual(expected);
+  });
 });

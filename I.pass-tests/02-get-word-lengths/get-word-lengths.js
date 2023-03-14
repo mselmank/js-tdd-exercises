@@ -1,7 +1,7 @@
-const getWordLengths = (someWords) => {
+const wordLengths = (someWords) => {
   return someWords.map((i) => i.length);
 };
 
 module.exports = {
-  getWordLengths,
+  wordLengths,
 };

@@ -1,17 +1,18 @@
-var findTheNeedle = require("./find-needle");
+const { findNeedle } = require("./find-needle");
 
-test("Find the needle", function() {
-  var words = ["house", "train", "slide", "needle", "book"];
-  var expected = 3;
+describe("Given an array find the word and index", () => {
+  it("should find the index position given the word plant into array of strings", () => {
+    const words = ["plant", "shelf", "arrow", "bird"];
+    const expected = 0;
+    const output = findNeedle(words, "plant");
 
-  var output = findTheNeedle(words, "needle");
-  expect(output).toEqual(expected);
-});
+    expect(output).toEqual(expected);
+  });
+  it("should find the index position given the word needle into array of strings", () => {
+    const words = ["house", "train", "slide", "needle", "book"];
+    const expected = 3;
+    const output = findNeedle(words, "needle");
 
-test("Find the plant", function() {
-  var words = ["plant", "shelf", "arrow", "bird"];
-  var expected = 0;
-
-  var output = findTheNeedle(words, "plant");
-  expect(output).toEqual(expected);
+    expect(output).toEqual(expected);
+  });
 });

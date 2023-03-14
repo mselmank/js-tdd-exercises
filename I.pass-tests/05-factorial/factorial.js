@@ -8,6 +8,5 @@
 // calculate and return the factorial of int
 // note: factorial of 0 is 1
 
-function factorial(int) {}
-
-module.exports = factorial;
+const factorial = (integer) => (integer ? integer * factorial(integer - 1) : 1);
+module.exports = { factorial };
