@@ -1,7 +1,8 @@
 const { factorial } = require("./factorial");
 
-describe("Given a function that calculate factorial of N", function () {
-  it("Should ", function () {
+describe("Given a function that calculate factorial of N", () => {
+  it("Should ", () => {
+    //⁡⁢⁣⁣𝗔𝗿𝗿𝗮𝗻𝗴𝗲⁡
     const in1 = 9;
     const exp1 = 362880;
 
@@ -16,13 +17,13 @@ describe("Given a function that calculate factorial of N", function () {
 
     // const in5 = 3;
     // const exp5 = 6;
-
+    //⁡⁢⁣⁣𝗔𝗰𝘁⁡
     const out1 = factorial(in1);
     // const out2 = factorial(in2);
     // const out3 = factorial(in3);
     // const out4 = factorial(in4);
     // const out5 = factorial(in5);
-
+    //⁡⁢⁣⁣𝗔𝘀𝘀𝗲𝗿𝘁⁡
     expect(out1).toEqual(exp1);
     // expect(out2).toEqual(exp2);
     // expect(out3).toEqual(exp3);

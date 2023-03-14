@@ -1,13 +1,14 @@
-var removeMiddle = require("./remove-middle");
+const { removeMiddle } = require("./remove-middle");
+describe("Given an array of strings ", () => {
+  it("should remove middle string of given array", () => {
+    const words = ["mouse", "giraffe", "queen", "window", "bottle"];
 
-test("Remove middle", function() {
-  var words = ["mouse", "giraffe", "queen", "window", "bottle"];
+    const expectedWords = ["mouse", "giraffe", "window", "bottle"];
+    const expectedOutput = ["queen"];
 
-  var expectedWords = ["mouse", "giraffe", "window", "bottle"];
-  var expectedOutput = ["queen"];
+    const output = removeMiddle(words);
 
-  var output = removeMiddle(words);
-
-  expect(output).toEqual(expectedOutput);
-  expect(words).toEqual(expectedWords);
+    expect(output).toEqual(expectedOutput);
+    expect(words).toEqual(expectedWords);
+  });
 });
