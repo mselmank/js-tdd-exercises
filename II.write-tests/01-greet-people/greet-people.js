@@ -1,14 +1,11 @@
-function greetPeople(people) {
-  var greeting = "Hello ";
-
-  people.forEach(function(person) {
-    greeting = greeting + person;
+const greetPeople = (people) => {
+  const greeting = "Hello";
+  const sayHello = people.map((person) => {
+    return `${greeting} ${person}`;
   });
-
-  return greeting;
-}
-
-module.exports = greetPeople;
+  return sayHello;
+};
+module.exports = { greetPeople };
 
 /*
   Let's trace this piece of code - what is the value of result with this input
