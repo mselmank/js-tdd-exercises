@@ -1,11 +1,8 @@
-function getLargestNumber(array) {
-  var largestNumber;
-  for (var i = 0; i < array.length - 1; i++) {
-    if (array[i] > array[i + 1]) {
-      largestNumber = array[i];
-    }
+const getLargestNumber = (array) => {
+  if (!Array.isArray(array)) {
+    throw new Error("Not implemented");
   }
-  return largestNumber;
-}
+  return Math.max(...array);
+};
 
-module.exports = getLargestNumber;
+module.exports = { getLargestNumber };

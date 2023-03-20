@@ -1,7 +1,8 @@
-function getEven(numbers) {
-  return numbers.filter(function(number) {
-    return number % 2 === 0;
-  });
-}
+const getEven = (numbers) => {
+  if (!Array.isArray(numbers)) {
+    throw new Error("numbers must be an array");
+  }
+  return numbers.filter((number) => number % 2 === 0);
+};
 
-module.exports = getEven;
+module.exports = { getEven };
